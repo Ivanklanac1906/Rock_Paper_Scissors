@@ -12,7 +12,7 @@ optionImages.forEach((image, index) =>{
 
 
         userResult.src = cpuResult.src = "images/rock.png";
-        result.textContent = "Wait...";
+        result.textContent = "Čekajte...";
         //loop through each option image 
 
         optionImages.forEach((image2, index2) =>{
@@ -60,15 +60,15 @@ optionImages.forEach((image, index) =>{
          // create an object with all possible outcomes
 
          let outcomes = {
-            RR: "Draw",
-            RP: "Cpu",
-            RS: "User",
-            PP: "Draw" ,
-            PR: "User" ,
-            PS: "Cpu" ,
-            SS: "Draw" ,
-            SR: "Cpu", 
-            SP: "User" ,
+            RR: "Izjednačeno",
+            RP: "Kompjuter ",
+            RS: "Čovjek",
+            PP: "Izjednačeno" ,
+            PR: "Čovjek" ,
+            PS: "Kompjuter" ,
+            SS: "Izjednačeno" ,
+            SR: "Kompjuter", 
+            SP: "Čovjek" ,
          };
 
          // look up the outcome value based on user and CPU options
@@ -77,7 +77,7 @@ optionImages.forEach((image, index) =>{
 
         // display the result 
 
-        result.textContent = userValue === cpuValue ? "Match Draw": `${outComeValue} Won!!`;
+        result.textContent = userValue === cpuValue ? "Izjednačeno": `${outComeValue} je pobijedio`;
         }, 2500);
 
     });
